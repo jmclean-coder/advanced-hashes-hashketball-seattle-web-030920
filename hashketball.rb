@@ -21,6 +21,8 @@ def game_hash
 #        {:player_name=>"Ben Gordon",:number=>8,:shoe=>15,:points=>33,:rebounds=>3,:assists=>2,:steals=>1,:blocks=>1,:slam_dunks=>0},
 #        {:player_name=>"Kemba Walker",:number=>33,:shoe=>15,:points=>6,:rebounds=>12,:assists=>12,:steals=>7,:blocks=>5,:slam_dunks=>12}]}
 # }
+def game_hash
+  {
 {:home=>
   {:team_name=>"Brooklyn Nets",
    :colors=>["Black", "White"],
@@ -119,7 +121,7 @@ def game_hash
       :steals=>7,
       :blocks=>5,
       :slam_dunks=>12}]}}
-end
+}
 
 def all_players
   home_players = game_hash[:home][:players]
@@ -217,6 +219,8 @@ def long_name_steals_a_ton?
 player_with_longest_name == all_players.max_by do |pl| pl[:steals]
   end [:player_name]
 end
+
+
 #pry.start
 #pp game_hash
  #Note on testing: I can run a section of tests with the following command
